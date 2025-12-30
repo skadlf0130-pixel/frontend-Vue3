@@ -6,7 +6,8 @@ const fruits = [ 'apple', 'banana', 'pear'];
 
 <template>
     <h3>Page103</h3>
-    <!-- v-if 디렉티브 -->
+    <!-- v-if 디렉티브
+    v-if는 false면 문서자체가 아에 없어진다-->
     <template v-if="loading">로딩 중</template>
     <!--template 텍스트로 변환시 사용-->
     <div v-else>로딩 완료</div>
@@ -18,7 +19,8 @@ const fruits = [ 'apple', 'banana', 'pear'];
     <div v-show="loading">show 로딩 중</div>
     <div v-show="!loading">show 로딩 완료</div>
     <hr>
-    <!-- v-for 사용할 때 주의사항이 있다. 항상 key속성을 주셔야 하며 유일값이어야 한다.-->
+    <!-- v-for 사용할 때 주의사항이 있다. 항상 key속성을 주셔야 하며 유일값이어야 한다.
+    -->
     <div v-for="(item, idx) in fruits" :key="idx">{{idx+1}}. {{item}}</div>
 
 </template>

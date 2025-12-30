@@ -25,7 +25,7 @@ const rect = {
     <input type="password" placeholder="비밀번호" :readonly="loading">
     <button :disabled="loding">로그인</button>
     <hr>
-    <ul :class="parent">
+    <ul :class="parent" class="fruit">
         <li :class="child">사과</li>
         <li :class="child">바나나</li>
         <li :class="child">딸기</li>

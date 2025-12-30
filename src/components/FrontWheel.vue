@@ -5,8 +5,8 @@ const page = 'history';
 
 <template>
     <div class="front-wheel">
-        <span :id="page">FRONT-WHEEL</span>
-        <Tire color= "BLUE" />
+        <span :id="page">FRONT-WHEEL</span><!--':'속성은 v-bind? 대체. 없으면 문자열로 page로 저장 ':'있으면 pagr안에 속성값인 'history'-->
+        <Tire color= "BLUE" /><!--""안에는 변수,상수,속성 중 하나가 들어간다.-->
     </div>
 </template>
 

@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: '/component',
-      component:() =>import('@/views/component.vue')
+      component:() =>import('@/views/Component.vue')
     },
     {
       path: '/page98',
@@ -18,15 +18,15 @@ const router = createRouter({
     },
     {
       path: '/mission01',
-      component:() =>import('@/views/mission/mission01.vue')
+      component:() =>import('@/views/mission/Mission01.vue')
     },
     {
       path: '/page108',
-      component:() =>import('@/views/page108.vue')
+      component:() =>import('@/views/Page108.vue')
     },
     {
       path: '/page110',
-      component:() =>import('@/views/page110.vue')
+      component:() =>import('@/views/Page110.vue')
     }
   ],
 })
