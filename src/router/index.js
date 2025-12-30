@@ -35,6 +35,18 @@ const router = createRouter({
     {
       path: '/page118',
       component:() =>import('@/views/Page118.vue')
+    },
+    {
+      path: '/page123',
+      component:() =>import('@/views/Page123.vue')
+    },
+    {
+      path: '/page125',
+      component:() =>import('@/views/Page125.vue')
+    },
+    {
+      path: '/page126',
+      component:() =>import('@/views/Page126.vue')
     }
   ],
 })
