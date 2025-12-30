@@ -3,13 +3,15 @@ import { ref } from 'vue' ;
 let pushUp = 0; //변수일뿐 반응형 상태는 아니다.
 let sitUp = 0;//변수일뿐 반응형 상태는 아니다.
 
-const refPushUp = ref(0);
-const refSitUp = ref(0);
+const refPushUp = ref(0); //초기값 0을 가지고 있는 ref 반응형 상태 객체 주소값이 넘어간다.
+const refSitUp = ref(0); //초기값 0을 가지고 있는 ref 반응형 상태 객체 주소값이 넘어간다.
+
 //반응현 상태란 자신의 값이 변하면 화면을 다시 그리는 변수 or 속성이다.
 
 //반응형 상태를 마드는 방법 2가지 ref, reactive를 이용해서 만들수 있다.
+
 const increasePushUp = () => {
-    console.log(`pushUp: ${++pushUp}, refPushUp: ${++refPushUp.value}`);
+    console.log(`pushUp: ${++pushUp}, refPushUp: ${++refPushUp.value}`); //ref 반응형 상태 객체의 값을 변경할 때는 value속성값을 변경하면 된다. ++를 붙이면 숫자형
 };
 const increaseSitUp = () => { 
     console.log(`sitUp: ${++sitUp}, refSitUp: ${++refSitUp.value}`);

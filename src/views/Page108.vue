@@ -7,6 +7,7 @@ const test = () => alert('테스트');
 
 <template>
     <h3>Page108.vue</h3>
+    <!-- v-on를 축약형으로 @를 많이 쓴다-->
     <button v-on:click="pop('Hello1111')">Hello</button>
     <button @click="pop('안녕')">안녕</button>
 
