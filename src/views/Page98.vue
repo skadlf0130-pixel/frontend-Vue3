@@ -23,7 +23,7 @@ const rect = {
     <h3>Page98.vue</h3>
     <input type="text" placeholder="아이디" v-bind:readonly="loading">
     <input type="password" placeholder="비밀번호" :readonly="loading">
-    <button :disabled="loding">로그인</button>
+    <button :disabled="loading">로그인</button>
     <hr>
     <ul :class="parent" class="fruit">
         <li :class="child">사과</li>

@@ -8,6 +8,8 @@ const state = reactive({
 });
 
 const login= () => {
+    // '.' 앞에는 객체의 주소값이 넘어온다
+    //'||'은 단하나의 true가 있으면 true
     if(state.form.id.length === 0 || !state.form.pw){
         alert('아이디/비밀번호를 확인해 주세요.');
         return;

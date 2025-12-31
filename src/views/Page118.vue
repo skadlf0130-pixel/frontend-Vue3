@@ -25,6 +25,7 @@ const getMvpName= () => {
 const computedMvpName = computed( () => {
     console.log('call computedMvpName');
     return state.players.find(item => item.id === state.mvpId)?.name || '없음';
+    // find 원하는 요소 하나만 넘어올때 조건을 만족하는 첫 번째 요소를 반환. 없으면 undefined를 반환
 } );
 const increaseMvpId= () => state.mvpId++;
 </script>
@@ -36,7 +37,7 @@ const increaseMvpId= () => state.mvpId++;
     <div>
         <!--'.' 있으면 리턴메서드 객체의 주소값이 넘어온걸 알수있다.
         
-        ()안에 있는 건 함수주소값
+        ()안에 있는 건 객체주소값
         
         ?(옵셔널 체이닝)는 앞의 값이 undefined 또는 null이면 에러를 내지 않고 그냥 undefined를 반환-->
         <template v-if = "state.mvpId"> {{ state.players.find(m => m.id === state.mvpId)?.name || 없음 }}</template>
