@@ -1,0 +1,31 @@
+import {ref, computed} from 'vue';
+import { defineStore } from 'pinia';
+
+//첫번째 아규먼트: 스토어 이름
+//두번째 아규먼트: 콜백함수(스토어 동작을 정의했다.)
+export const useCounterStore= defineStore('counter', () =>{
+    const count = ref(0);//ref로 만드었기 때문에 count가 반응형이다
+    const doubleCount= computed(() => count.value*2);
+    const increment = () => count.value++;
+    const  decrement= () =>{
+        if(count.value > 0 ) {
+        count.value--;
+        }
+    };
+    
+    /*위에랑 같은 내용
+    const  decrement= () => count.value > 0 &&
+        count.value--;
+    */
+
+    return { count, doubleCount, increment, decrement};
+
+    /*
+    return { count, doubleCount, increment};
+    위 내용은 아래 내용과 같다
+    return {
+        'count': count,
+        'doubleCount': doubleCount,
+        'increment':increment
+        }; */
+});

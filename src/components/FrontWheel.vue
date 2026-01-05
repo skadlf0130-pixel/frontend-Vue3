@@ -1,12 +1,17 @@
 <script setup>
 import Tire from './Tire.vue';
+import { useCounterStore } from '@/stores/counter';
 const page = 'history';
+
+//counterStore에는 { count, doubleCount, increment} 객체 주소값이 넘어온다.
+const CounterStore = useCounterStore();
 </script>
 
 <template>
     <div class="front-wheel">
         <span :id="page">FRONT-WHEEL</span><!--':'속성은 v-bind? 대체. 없으면 문자열로 page로 저장 ':'있으면 pagr안에 속성값인 'history'-->
         <Tire color= "BLUE" /><!--""안에는 변수,상수,속성 중 하나가 들어간다.-->
+        <div>TIMES:{{ CounterStore.count }}</div>
     </div>
 </template>
 
